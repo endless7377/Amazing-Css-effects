@@ -1,0 +1,62 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inspiration&family=Merriweather:wght@300&family=Poppins:ital,wght@1,300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+
+    background: #000000;
+}
+.myName{
+    font-family: 'Inspiration', cursive;
+    font-size: 100px;
+    color: #ffffff;
+    text-align: center;
+
+}
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25vh;
+}
+.container .glass{
+    position: relative;
+    width: 240px;
+    height: 280px;
+    background: linear-gradient(#fff2,transparent);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition:0.5s;
+    border-radius: 10px;
+    margin:0 -45px;
+    transform: rotate(calc(var(--r) * 2deg));
+    font-family: 'Courier New', Courier, monospace;
+}
+.container:hover .glass{
+    transform: rotate(0deg);
+    margin: 0 25PX;
+    
+}
+.container .glass::before{
+    content:attr(data-text);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color :#fff;
+}
+.glass i{
+    color: #fff;
+    font-size: 100px;
+}
